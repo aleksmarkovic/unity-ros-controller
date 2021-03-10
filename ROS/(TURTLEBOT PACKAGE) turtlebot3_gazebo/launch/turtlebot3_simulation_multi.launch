@@ -1,0 +1,17 @@
+<launch>
+  <arg name="cmd_vel" default="/tb3_0/cmd_vel"/>
+  <arg name="name" default="turtlebot3_0"/>
+
+  <param name="cmd_vel_topic_name" value="$(arg cmd_vel)"/>
+
+  <node name="$(arg name)_drive" pkg="turtlebot3_gazebo" type="turtlebot3_drive" required="true" output="screen"/>
+
+
+
+  <arg name="cmd_vel2" default="/tb3_1/cmd_vel"/>
+  <arg name="name2" default="turtlebot3"/>
+
+  <param name="cmd_vel_topic_name" value="$(arg cmd_vel2)"/>
+
+  <node name="$(arg name2)_drive2" pkg="turtlebot3_gazebo" type="turtlebot3_drive" required="true" output="screen"/>
+</launch>
